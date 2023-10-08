@@ -1,0 +1,30 @@
+ESTIMATE of time to complete assignment: 20 hours
+
+      Time     Time
+Date  Started  Spent Work completed
+----  -------  ----  --------------
+10/01 7:00pm   3:00  read assignment, watched the lectures on expectimax and understood
+                     the rules of expectimax. set up the code into OOP classes and functions.
+10/02 10:00am  4:00  implemented a brute-force expected value function for player 2.
+8/15 12:00pm   7:00  sped up function with dynamic programming and pre-processing all possible subsets
+                     of subsets. implemented the player one expected value function. Implemented and debugged
+                     the problematic optimal move function.
+               ----
+               14:00  TOTAL 
+               time spent
+
+I discussed my solution with: no one.
+
+DISCUSSION
+
+The most difficult parts of this project for me were figuring out how to optimize the expected
+value calculations and understanding the scope of the optimal move function. 
+
+For the first challenge, I was trying to store the power set of each subset as I was "exploring" them, 
+but I settled on creating a memo to store the subsets of every subset of the initial set, as I realized that every "move" 
+decreases the set to a subset, so computing it all at the front would mean an easy O(1) lookup afterwards.
+
+The final challenge was just due to my overlooking of the problem statement and not realizing that we are
+given the sum of the dice roll. This means that we only have to compute the optimal move for one iteration. I
+was trying to change my entire algorithm to store both the optimal move and expected value at each step, which
+proved to be difficult.
